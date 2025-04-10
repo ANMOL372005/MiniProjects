@@ -1,0 +1,262 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #1abc9c;
+  --secondary-color: #1abc9c;
+  --background-color: #ecf0f1;
+  --text-color: #2c3e50;
+  --white: #ffffff;
+  --success-color: #2ecc71;
+  --danger-color: #e74c3c;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.8;
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+.navbar {
+  background-color: var(--primary-color);
+  padding: 1.5rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.nav-brand {
+  color: var(--white);
+  font-size: 1.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.nav-brand:hover {
+  color: var(--secondary-color);
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: var(--white);
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  padding: 0.5rem 1rem;
+}
+
+.nav-links a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+}
+
+main {
+  max-width: 1400px;
+  margin: 100px auto;
+  padding: 2rem;
+}
+
+.game-container {
+  background-color: var(--white);
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  max-width: 1000px;
+  margin: 20px auto;
+}
+
+.game-container h2 {
+  color: var(--primary-color);
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.score-board {
+  background-color: var(--background-color);
+  padding: 2rem;
+  border-radius: 12px;
+  margin: 2rem 0;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.team-score {
+  margin-bottom: 1.5rem;
+}
+
+.team-score h3 {
+  font-size: 2rem;
+  color: var(--primary-color);
+}
+
+.team-score p {
+  font-size: 1.3rem;
+  color: var(--text-color);
+}
+
+
+.batsman-scores {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+
+.batsman {
+  background-color: var(--white);
+  padding: 1.5rem;
+  border-radius: 10px;
+  width: 30%;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.batsman:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.batsman.active {
+  background-color: var(--secondary-color);
+  color: var(--white);
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.controls button {
+  padding: 1rem 1.5rem;
+  font-size: 1.2rem;
+  background-color: var(--secondary-color);
+  color: var(--white);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-weight: 600;
+}
+
+.controls button:hover {
+  background-color: var(--primary-color);
+}
+
+.select-popup {
+  background-color: #fff;
+  padding: 16px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  max-width: 300px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+/* Add spacing between the buttons */
+.select-popup button {
+  display: block;
+  margin: 8px auto;
+  padding: 8px 16px;
+  border: none;
+  background-color: #1abc9c;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.select-popup button:hover {
+  background-color: #1abc9c;
+}
+
+
+.about-container,
+.contact-container {
+  background-color: var(--white);
+  padding: 3rem;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  max-width: 1000px;
+  margin: 20px auto;
+}
+
+.about-container h2,
+.contact-container h2 {
+  color: var(--primary-color);
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.contact-info {
+  text-align: center;
+}
+
+.contact-info p {
+  font-size: 1.2rem;
+}
+
+
+@media (max-width: 1024px) {
+  .batsman {
+    width: 45%;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: row;
+    padding: 1rem;
+  }
+
+  .nav-links {
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .batsman {
+    width: 100%;
+  }
+
+  .controls {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    padding: 1rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .nav-links a {
+    width: 100%;
+    text-align: center;
+  }
+
+}
+
