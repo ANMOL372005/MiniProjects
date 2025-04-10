@@ -1,6 +1,0 @@
-[submodule "Assignment-1/PasswordManager"]
-	path = Assignment-1/PasswordManager
-	url = https://github.com/ANMOL372005/MiniProjects.git
-[submodule "PasswordManager"]
-	path = PasswordManager
-	url = https://github.com/ANMOL372005/MiniProjects.git
